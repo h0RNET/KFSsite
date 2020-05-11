@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Main page</title>
+	<link rel="stylesheet" href="style.css">
+
+	<script type="text/javascript">
+		function swap(ind) {
+			var burgers = document.getElementById("burgers");
+			var drinks = document.getElementById("drinks");
+			var contacts = document.getElementById("contacts");
+
+			var li = document.getElementsByClassName("nav-button")
+
+			for (var i = 0; i < li.length; i++) {
+				if (i == ind) {
+					li[i].style.borderBottom = "1.5px";
+					li[i].style.color = "rgba(228, 0, 43, 1)";
+					li[i].style.borderBottomStyle = "solid";
+					li[i].style.fontWeight = "bold";
+				} else {
+					li[i].style.border = "0";
+					li[i].style.color = "black";
+				}
+			}
+		}
+
+	</script>
+</head>
+
+<body>
+	<div id="site">
+		<div id="header-block">
+			<div id="header-kfs">
+				<img width="150" height="112" src="../img/header.png" alt="Изображения нет">
+			</div>
+
+			<div align="center" id="user-inf">
+				<form action="Login" method="GET">
+					<input id="login" type="text" name="login" placeholder="Введите логин">
+					<input id="password" type="text" name="login" placeholder="Введите пароль">
+					<input id="submit" type="submit" value="Войти">
+				</form>
+			</div>
+		</div>
+
+		<div id="menu-bar">
+			<div class="navigation">
+				<li class="nav-button" id="burgers" style="margin-left: 50px" onclick="swap(0)">Бургеры</button>
+				<li class="nav-button" id="drinks" style="margin-left: 50px" onclick="swap(1)">Напитки</button>
+				<li class="nav-button" id="contacts" style="margin-left: 650px" onclick="swap(2)">Контакты</li>
+
+			</div>
+		</div>
+
+		<div id="content">
+			
+		</div>
+		<div id="footer">
+			Сайт сделан <a href="https://vk.com/blokedd" target="_blank"> мной :)</a>
+		</div>
+	</div>
+</body>
+
+</html>
